@@ -43,9 +43,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #  - images/a_dot_burr.jpeg
-  #  - images/a_dot_ham.jpeg
+  assets:
+    - img/landing-vector.png
+    - img/nav-arrow.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -63,6 +63,22 @@ flutter:
      fonts:
        - asset: font/MonarchDisplay-Tantum.ttf
          weight: 700
+   - family: BoldBold
+     fonts:
+       - asset: font/Bold.ttf
+         weight: 700
+   - family: BrandType
+     fonts:
+       - asset: font/BrandType.ttf
+         weight: 700
+   - family: Medium
+     fonts:
+        - asset: font/Medium.ttf
+          weight: 700
+   - family: Regular
+     fonts:
+        - asset: font/Regular.ttf
+          weight: 700
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
