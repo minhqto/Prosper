@@ -75,16 +75,26 @@ class FirstScreen extends StatelessWidget{
 
                          child: Image(image: AssetImage('img/landing-vector.png')),
                           width: MediaQuery.of(context).size.width,
-                          //height: 100,
+
                           alignment: Alignment(0.5,0.3),
                         ),
+                    ),
+                  Container(
+                      alignment: Alignment(0.9,0.9),
+                      child: FlatButton(
+                        onPressed: (){},
+                        child: Text("Next",
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontFamily: "Medium"
+                        ))
+                      )
 
-
-                    )
+    )
 
                     ]
-                ),
-          ),
+              )  ,
+            )
     );
   }
 }
