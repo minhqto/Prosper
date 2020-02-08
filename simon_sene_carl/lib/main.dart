@@ -16,7 +16,7 @@ void main(){
         child: Text("My name is Jeff",
         style: TextStyle(
           fontSize: 30,
-          letterSpacing: 2.0
+          fontFamily: 'MonarchDisplay'
         ),),
       ),
       floatingActionButton: FloatingActionButton(
