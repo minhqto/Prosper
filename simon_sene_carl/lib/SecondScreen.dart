@@ -36,15 +36,14 @@ class SecondScreen extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Container(
-                width: size.width,
-                height: size.height * 0.2,
+                padding: const EdgeInsets.fromLTRB(0,20,0,20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Text("Get Started",
                         style: TextStyle(
-                          fontFamily: "Maax",
+                          fontFamily: "Regular",
                           fontSize: 19,
                           color: Colors.grey,
                         )),
@@ -57,10 +56,7 @@ class SecondScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              // Padding(
-              //   padding: const EdgeInsets.symmetric(horizontal: 20),
-              //   child: SearchBar(),
-              // ),
+
               RaisedButton(
                 child: Text('Go to the next screen'),
                 onPressed: () {
