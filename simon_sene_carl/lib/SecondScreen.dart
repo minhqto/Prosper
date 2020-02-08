@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simon_sene_carl/ThirdScreen.dart';
 import "package:flappy_search_bar/flappy_search_bar.dart";
+import 'themeColor.dart';
 
 class SecondScreen extends StatelessWidget {
   @override
@@ -28,7 +29,7 @@ class SecondScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(245, 246, 240, 1.0),
+      backgroundColor: getTheme(),
       body: Container(
           height: size.height,
           width: size.width,
