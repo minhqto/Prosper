@@ -12,18 +12,7 @@ class FirstScreen extends StatelessWidget {
         body: Container(
           //padding: EdgeInsets.all(20.0),
           child: Stack(children: <Widget>[
-            Center(
-                child: Container(
-              child: Padding(
-                padding: const EdgeInsets.all(20.0),
-                child: Text("Prosper",
-                    style: TextStyle(
-                      fontFamily: "MonarchDisplay",
-                      fontSize: 24,
-                    )),
-              ),
-              alignment: Alignment(-1.0, -0.7),
-            )),
+            getTitle(),
             Center(
                 child: Container(
               child: Padding(

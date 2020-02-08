@@ -18,3 +18,19 @@ Color getLightGrey() {
   const Color lightGrey = Color.fromRGBO(182, 182, 182, 1.0);
   return lightGrey;
 }
+
+Center getTitle()
+{
+  return Center(
+      child: Container(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Text("Prosper",
+              style: TextStyle(
+                fontFamily: "MonarchDisplay",
+                fontSize: 24,
+              )),
+        ),
+        alignment: Alignment(-1.0, -0.7),
+      ));
+}

@@ -83,7 +83,9 @@ class ThirdScreen extends StatelessWidget {
                                     context,
                                     MaterialPageRoute(builder: (context) => LearnStocks())
                                   ) : AlertDialog(
-                                  title: Text("hi")
+                                  title: Text("Hey there!"),
+                                  content: Text("Not so fast! Let's start with beginner."),
+                                  actions: <Widget>[],
                                 );},
                                 child: Text(level.toString(),
                                 style:
