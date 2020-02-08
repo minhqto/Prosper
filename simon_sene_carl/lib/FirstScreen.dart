@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simon_sene_carl/SecondScreen.dart';
+import 'themeColor.dart';
 
 class FirstScreen extends StatelessWidget {
   @override
@@ -7,7 +8,7 @@ class FirstScreen extends StatelessWidget {
     double c_width = MediaQuery.of(context).size.width * 0.8;
     // TODO: implement build
     return new Scaffold(
-        backgroundColor: const Color.fromRGBO(245, 246, 240, 1.0),
+        backgroundColor: getTheme(),
         body: Container(
           //padding: EdgeInsets.all(20.0),
           child: Stack(children: <Widget>[
@@ -30,12 +31,12 @@ class FirstScreen extends StatelessWidget {
                 child: Text(
                   "Prosper is a financial literacy app that aims to educate you on topics of finance in through an interactive experience.",
                   style: TextStyle(
-                    fontFamily: "BoldBold",
-                    fontSize: 22,
+                    fontFamily: "Medium",
+                    fontSize: 20,
                   ),
                 ),
               ),
-              alignment: Alignment(-0.9, -0.5),
+              alignment: Alignment(-0.9, -0.45),
             )),
             Center(
               child: Container(
