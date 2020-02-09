@@ -4,16 +4,15 @@ import 'themeColor.dart';
 import 'buyingStock.dart';
 
 class ChooseConcept extends StatefulWidget {
-  final choice;
-  ChooseConcept({@required this.choice});
+  //final choice;
+ const ChooseConcept({Key key, choice}) : super(key:key);
   @override
   _ConceptState createState() => new _ConceptState();
 }
 
 class _ConceptState extends State<ChooseConcept>
 {
-
-
+  String choice;
   List<String> easyConcepts = ["Buying Stocks", "Selling Stocks", "Dividends"];
   List<String> mediumConcepts = ["Limits", "Stops", "Stop Limits"];
   List<String> hardConcepts = ["Put Options", "Short Selling"];
@@ -62,7 +61,7 @@ class _ConceptState extends State<ChooseConcept>
             Column(
 
             children: <Widget>[
-              if(choice.toString() == "Beginner")
+              if(this.choice.toString() == "Beginner")
               for(var choice in easyConcepts)
                 Container(
                   padding: EdgeInsets.only(top: 40),
