@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'themeColor.dart';
 import 'package:flutter/material.dart';
 import 'chooseConcept.dart';
+import "./widgets/drawer.dart";
 
 class LearnStocks extends StatelessWidget {
   final level;
@@ -24,7 +25,9 @@ class LearnStocks extends StatelessWidget {
                   TextStyle(fontFamily: "MonarchDisplay", color: Colors.black)),
         ),
         backgroundColor: getTheme(),
-        drawer: Drawer(),
+        drawer: MyDrawer(
+          title: "Drawer",
+        ),
         body: Container(
             child: ListView(
           children: <Widget>[
