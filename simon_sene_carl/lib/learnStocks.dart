@@ -4,10 +4,10 @@ import 'themeColor.dart';
 import 'package:flutter/material.dart';
 import 'chooseConcept.dart';
 
-class LearnStocks extends StatelessWidget{
-
-final level;
-LearnStocks({@required this.level});
+class LearnStocks extends StatelessWidget {
+  final level;
+  final topic;
+  LearnStocks({@required this.level, @required this.topic});
 
   @override
   Widget build(BuildContext context) {
@@ -19,56 +19,34 @@ LearnStocks({@required this.level});
           elevation: 0,
           backgroundColor: getTheme(),
           iconTheme: new IconThemeData(color: Colors.black),
-          title: Text(
-            "Prosper",
-            style: TextStyle(
-              fontFamily: "MonarchDisplay",
-              color: Colors.black
-            )
-          ),
-      ),
-
-      backgroundColor: getTheme(),
-      drawer: Drawer(),
-      body: Container(
-
-        child: ListView(
+          title: Text("Prosper",
+              style:
+                  TextStyle(fontFamily: "MonarchDisplay", color: Colors.black)),
+        ),
+        backgroundColor: getTheme(),
+        drawer: Drawer(),
+        body: Container(
+            child: ListView(
           children: <Widget>[
             Container(
-              padding:  const EdgeInsets.only(left:20.0, top: 40.0),
-
-            child: Text("Looks like you are interested in learning about Trading Stocks at a ${level} level.",
-            style: TextStyle(
-              fontFamily: "Medium",
-              fontSize: 26
-            ))),
-            Container(
-              padding: const EdgeInsets.only(left: 20, top:20),
-              child: Text("We have created a personalized guide to help you with that.",
-              style: TextStyle(
-                color: Colors.grey,
-                fontFamily: "Regular"
-                )
-              )
-            ),
-            Center(
-            child: Container(
-              width: size.width * 0.8,
-              child: OutlineButton(
-                onPressed: (){},
+                padding: const EdgeInsets.only(left: 20.0, top: 40.0),
                 child: Text(
-                  "Start Now"
-                ),
-
-              )
-            )
-            )
+                    "Looks like you are interested in learning about ${topic} at a ${level} level.",
+                    style: TextStyle(fontFamily: "Medium", fontSize: 26))),
+            Container(
+                padding: const EdgeInsets.only(left: 20, top: 20),
+                child: Text(
+                    "We have created a personalized guide to help you with that.",
+                    style:
+                        TextStyle(color: Colors.grey, fontFamily: "Regular"))),
+            Center(
+                child: Container(
+                    width: size.width * 0.8,
+                    child: OutlineButton(
+                      onPressed: () {},
+                      child: Text("Start Now"),
+                    )))
           ],
-      )
-
-
-      )
-
-    );
+        )));
   }
 }
