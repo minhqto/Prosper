@@ -1,7 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import "themeColor.dart";
+ import 'package:cloud_firestore/cloud_firestore.dart';
+ import 'package:flutter/cupertino.dart';
+ import 'package:flutter/material.dart';
+ import "themeColor.dart";
+
 
 class Summary extends StatefulWidget{
   final ticker;
@@ -54,18 +55,20 @@ class _Summary extends State<Summary> {
                 children: <Widget>[
 
                   Expanded(
-                  child: Padding(
-                    padding: EdgeInsets.only(top: 40, left:20),
-                    child: Text('Account', textAlign: TextAlign.left,
-                        style: TextStyle(fontSize: 14, fontFamily: "Regular")),
-                  )),
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 40, left: 20),
+                        child: Text('Account', textAlign: TextAlign.left,
+                            style: TextStyle(
+                                fontSize: 14, fontFamily: "Regular")),
+                      )),
 
                   Expanded(
-                    child: Padding(
-                      padding: EdgeInsets.only(top: 40, right:20),
-                      child: Text('TFSA', textAlign: TextAlign.right,
-                        style: TextStyle(fontSize: 20, fontFamily: "Regular")),
-                  )),
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 40, right: 20),
+                        child: Text('TFSA', textAlign: TextAlign.right,
+                            style: TextStyle(
+                                fontSize: 20, fontFamily: "Regular")),
+                      )),
 
                 ]),
             Divider(
@@ -76,16 +79,18 @@ class _Summary extends State<Summary> {
 
                   Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(top: 10, left:20),
+                        padding: EdgeInsets.only(top: 10, left: 20),
                         child: Text('Symbol', textAlign: TextAlign.left,
-                            style: TextStyle(fontSize: 14, fontFamily: "Regular")),
+                            style: TextStyle(
+                                fontSize: 14, fontFamily: "Regular")),
                       )),
 
                   Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(top: 10, right:20),
+                        padding: EdgeInsets.only(top: 10, right: 20),
                         child: Text('Ticket PH', textAlign: TextAlign.right,
-                            style: TextStyle(fontSize: 20, fontFamily: "Regular")),
+                            style: TextStyle(
+                                fontSize: 20, fontFamily: "Regular")),
                       )),
 
                 ]),
@@ -97,16 +102,18 @@ class _Summary extends State<Summary> {
 
                   Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(top: 10,left:20),
+                        padding: EdgeInsets.only(top: 10, left: 20),
                         child: Text('Market Value', textAlign: TextAlign.left,
-                            style: TextStyle(fontSize: 14, fontFamily: "Regular")),
+                            style: TextStyle(
+                                fontSize: 14, fontFamily: "Regular")),
                       )),
 
                   Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(top: 10, right:20),
+                        padding: EdgeInsets.only(top: 10, right: 20),
                         child: Text('MV PH', textAlign: TextAlign.right,
-                            style: TextStyle(fontSize: 20, fontFamily: "Regular")),
+                            style: TextStyle(
+                                fontSize: 20, fontFamily: "Regular")),
                       )),
 
                 ]),
@@ -118,16 +125,18 @@ class _Summary extends State<Summary> {
 
                   Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(top: 10,left:20),
+                        padding: EdgeInsets.only(top: 10, left: 20),
                         child: Text('Quantity', textAlign: TextAlign.left,
-                            style: TextStyle(fontSize: 14, fontFamily: "Regular")),
+                            style: TextStyle(
+                                fontSize: 14, fontFamily: "Regular")),
                       )),
 
                   Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(top: 10, right:20),
+                        padding: EdgeInsets.only(top: 10, right: 20),
                         child: Text('Quality PH', textAlign: TextAlign.right,
-                            style: TextStyle(fontSize: 20, fontFamily: "Regular")),
+                            style: TextStyle(
+                                fontSize: 20, fontFamily: "Regular")),
                       )),
 
                 ]),
@@ -139,16 +148,18 @@ class _Summary extends State<Summary> {
 
                   Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(top: 10,left:20),
+                        padding: EdgeInsets.only(top: 10, left: 20),
                         child: Text('Estimated Cost', textAlign: TextAlign.left,
-                            style: TextStyle(fontSize: 14, fontFamily: "Regular")),
+                            style: TextStyle(
+                                fontSize: 14, fontFamily: "Regular")),
                       )),
 
                   Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(top: 10, right:20),
+                        padding: EdgeInsets.only(top: 10, right: 20),
                         child: Text('MV PH', textAlign: TextAlign.right,
-                            style: TextStyle(fontSize: 20, fontFamily: "Regular")),
+                            style: TextStyle(
+                                fontSize: 20, fontFamily: "Regular")),
                       )),
 
                 ]),
@@ -160,21 +171,23 @@ class _Summary extends State<Summary> {
 
                   Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(top: 10,left:20),
+                        padding: EdgeInsets.only(top: 10, left: 20),
                         child: Text('Fee', textAlign: TextAlign.left,
-                            style: TextStyle(fontSize: 14, fontFamily: "Regular")),
+                            style: TextStyle(
+                                fontSize: 14, fontFamily: "Regular")),
                       )),
 
                   Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(top: 10, right:20),
+                        padding: EdgeInsets.only(top: 10, right: 20),
                         child: Text("\$9.95 CAD", textAlign: TextAlign.right,
-                            style: TextStyle(fontSize: 20, fontFamily: "Regular")),
+                            style: TextStyle(
+                                fontSize: 20, fontFamily: "Regular")),
                       )),
 
                 ]),
             Padding(
-              padding: EdgeInsets.only(bottom:50)
+                padding: EdgeInsets.only(bottom: 50)
             ),
             Divider(
               color: Colors.black,
@@ -185,16 +198,18 @@ class _Summary extends State<Summary> {
 
                   Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(top: 10,left:20),
+                        padding: EdgeInsets.only(top: 10, left: 20),
                         child: Text('Total Cost', textAlign: TextAlign.left,
-                            style: TextStyle(fontSize: 14, fontFamily: "Regular")),
+                            style: TextStyle(
+                                fontSize: 14, fontFamily: "Regular")),
                       )),
 
                   Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(top: 10, right:20),
+                        padding: EdgeInsets.only(top: 10, right: 20),
                         child: Text('TC PH', textAlign: TextAlign.right,
-                            style: TextStyle(fontSize: 20, fontFamily: "Regular")),
+                            style: TextStyle(
+                                fontSize: 20, fontFamily: "Regular")),
                       )),
 
                 ]),
@@ -203,30 +218,32 @@ class _Summary extends State<Summary> {
 
                   Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(top: 40,left:20),
-                        child: FlatButton(
-                          onPressed: (){Navigator.pop(context);},
+                          padding: EdgeInsets.only(top: 40, left: 20),
+                          child: FlatButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
                             child: Text('Cancel', textAlign: TextAlign.left,
-                            style: TextStyle(fontSize: 14, fontFamily: "Regular")),
-                             ))),
+                                style: TextStyle(
+                                    fontSize: 14, fontFamily: "Regular")),
+                          ))),
 
                   Expanded(
                       child: Padding(
-                        padding: EdgeInsets.only(top: 40, right:20),
-                        child: OutlineButton(
-                          onPressed: (){},
+                          padding: EdgeInsets.only(top: 40, right: 20),
+                          child: OutlineButton(
+                            onPressed: () {},
 
-                        child: Text('Confirm Purchase', textAlign: TextAlign.right,
-                            style: TextStyle(fontSize: 12, fontFamily: "Regular")),
-                      ))),
+                            child: Text(
+                                'Confirm Purchase', textAlign: TextAlign.right,
+                                style: TextStyle(
+                                    fontSize: 12, fontFamily: "Regular")),
+                          ))),
 
                 ]),
           ],
-
         )
-
     );
   }
 }
-
 
