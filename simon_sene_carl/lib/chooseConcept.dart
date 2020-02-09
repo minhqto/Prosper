@@ -4,20 +4,21 @@ import 'themeColor.dart';
 import 'buyingStock.dart';
 
 class ChooseConcept extends StatefulWidget {
+  final choice;
+  ChooseConcept({@required this.choice});
   @override
   _ConceptState createState() => new _ConceptState();
 }
 
-class _ConceptState extends State<Widget>
+class _ConceptState extends State<ChooseConcept>
 {
 
-final choice;
-  ChooseConcept({@required this.choice});
+
   List<String> easyConcepts = ["Buying Stocks", "Selling Stocks", "Dividends"];
   List<String> mediumConcepts = ["Limits", "Stops", "Stop Limits"];
   List<String> hardConcepts = ["Put Options", "Short Selling"];
 
-
+  @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     // TODO: implement build
