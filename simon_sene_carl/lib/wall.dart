@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-
+import 'Summary.dart';
 
 const String testDevice = '';
 
@@ -113,7 +113,7 @@ class _WallScreenState extends State<WallScreen> {
           Container(
             padding: EdgeInsets.only(top: 15),
             child: OutlineButton(
-              //onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => SearchStock()))},
+              onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => Summary()));},
               child: Text("Practice Buying a Stock",
                   style: TextStyle(
                       fontFamily: "Regular",
@@ -124,6 +124,7 @@ class _WallScreenState extends State<WallScreen> {
           ),
           Container(
             child: FlatButton(
+              onPressed: (){Navigator.pop(context);},
               child: Text("Go to Dashboard",
                   style: TextStyle(
                   fontFamily: "Regular",

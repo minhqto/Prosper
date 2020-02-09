@@ -32,7 +32,7 @@ class BuyingStocks extends StatelessWidget{
         Container(
           padding: getHeaderPadding(),
           child: Text(
-            "Before you begin...",
+            "What exactly is a stock?",
               style: TextStyle(fontFamily: "Medium", fontSize: 28)),
 
         ),
@@ -41,7 +41,7 @@ class BuyingStocks extends StatelessWidget{
         ),
         Container(
           padding: getSubHeaderPadding(),
-            child: Text("Ask yourself these simple questions. Do I have a goal of how much to save and invest every month? Do I have an investment portfolio? If you have an investment portfolio, why did you chose that investment plan? Does my investment strategy align with my short term and long term goals?"
+            child: Text("Simply put, stocks represent ownership of a company. Companies can choose to place their company on a public stock market, and allow the public to buy shares of their company, so anyone can own a part of that company."
         , style:
         TextStyle(
           fontFamily: "Regular", fontSize: 14
