@@ -58,6 +58,7 @@ flutter:
     - img/nav-arrow.png
     - img/selection-vector_Artboard_6.png
     - assets/m.jpeg
+    - img/pig.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
