@@ -1,13 +1,12 @@
 
 import 'dart:ffi';
-
 import 'package:simon_sene_carl/themeColor.dart';
-
 import 'fullscreen_image.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+
 
 const String testDevice = '';
 
@@ -93,7 +92,48 @@ class _WallScreenState extends State<WallScreen> {
               TextStyle(fontFamily: "MonarchDisplay", color: Colors.black)),
         ),
         drawer: Drawer(),
-      body: _buildBody(context)
+      body: Column(
+        children: <Widget>[
+          Text("If you want to learn more...",
+          style: TextStyle(
+            fontFamily: "Medium",
+            fontSize: 20
+          )),
+          Container(
+              padding: EdgeInsets.only(bottom: 15),
+              child: Text("We have selected several articles for you if you are interested in exploring more about Trading Stocks",
+              style: TextStyle(
+                  fontFamily: "Regular",
+                  fontSize: 12
+              ))),
+          SizedBox(
+            height: 570,
+            child: _buildBody(context)
+          ),
+          Container(
+            child: OutlineButton(
+              onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => SearchStock()))},
+              child: Text("Practice Buying a Stock",
+                  style: TextStyle(
+                      fontFamily: "Regular",
+                      fontSize: 16
+                  )
+              )
+            )
+          ),
+          Container(
+            child: FlatButton(
+              child: Text("Go to Dashboard",
+                  style: TextStyle(
+                  fontFamily: "Regular",
+                  fontSize: 14
+              ))
+            )
+          )
+
+        ],
+      ),
+
     );
   }
 }
