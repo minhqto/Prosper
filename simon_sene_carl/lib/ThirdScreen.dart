@@ -16,10 +16,6 @@ class ThirdScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     List<String> knowledgeBase = ["Beginner", "Intermediate", "Advanced"];
 
-    bool ifBeginner(String level) {
-      return level == "Beginner" ? true : false;
-    }
-
     return Scaffold(
       backgroundColor: getTheme(),
       body: Container(
@@ -32,6 +28,7 @@ class ThirdScreen extends StatelessWidget {
                 width: size.width,
                 height: size.height,
                 child: ListView(
+
                   children: <Widget>[
                     Container(
                       alignment: Alignment(-1, 0),
@@ -59,22 +56,17 @@ class ThirdScreen extends StatelessWidget {
                               padding: const EdgeInsets.all(10),
                               child: OutlineButton(
                                   onPressed: () {
-                                    ifBeginner(level.toString())
-                                        ? Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) =>
-                                                    LearnStocks()))
-                                        : AlertDialog(
-                                            title: Text("Hey there!"),
-                                            content: Text(
-                                                "Not so fast! Let's start with beginner."),
-                                            actions: <Widget>[],
-                                          );
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                LearnStocks(
+                                                    level: level.toString()))
+                                    );
                                   },
                                   child: Text(level.toString(),
                                       style: TextStyle(fontFamily: "Regular"))))
-                      ],
+                        ],
                     )
                   ],
                 ),

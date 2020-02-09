@@ -31,13 +31,13 @@ class SecondScreen extends StatelessWidget {
                   children: <Widget>[
                     Text("Get Started",
                         style: TextStyle(
-                          fontFamily: "Maax",
+                          fontFamily: "Regular",
                           fontSize: 19,
                           color: Colors.grey,
                         )),
                     Text("Which topic are you interested in?",
                         style: TextStyle(
-                          fontFamily: "Maax",
+                          fontFamily: "Regular",
                           fontSize: 30,
                           fontWeight: FontWeight.w500,
                         )),

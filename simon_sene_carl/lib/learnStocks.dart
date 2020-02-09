@@ -2,68 +2,71 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/rendering.dart';
 import 'themeColor.dart';
 import 'package:flutter/material.dart';
+import 'chooseConcept.dart';
 
 class LearnStocks extends StatelessWidget{
 
+final level;
+LearnStocks({@required this.level});
+
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     // TODO: implement build
     return Scaffold(
-      backgroundColor: getTheme(),
-      body: Container(
-        padding:  const EdgeInsets.only(left:50.0, top: 40.0),
-        child: Drawer(
-          // Add a ListView to the drawer. This ensures the user can scroll
-          // through the options in the drawer if there isn't enough vertical
-          // space to fit everything.
-          child: ListView(
-            // Important: Remove any padding from the ListView.
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              DrawerHeader(
-                child: Text('Drawer Header'),
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                ),
-              ),
-              ListTile(
-                title: Text('Item 1'),
-                onTap: () {
-                  // Update the state of the app.
-                  // ...
-                },
-              ),
-              ListTile(
-                title: Text('Item 2'),
-                onTap: () {
-                  // Update the state of the app.
-                  // ...
-                },
-              ),
-              ListTile(
-                title: Text('Item 2'),
-                onTap: () {
-                  // Update the state of the app
-                  // ...
-                  // Then close the drawer
-                  Navigator.pop(context);
-                },
-              ),
-            ],
+        extendBodyBehindAppBar: true,
+        appBar: new AppBar(
+          elevation: 0,
+          backgroundColor: getTheme(),
+          iconTheme: new IconThemeData(color: Colors.black),
+          title: Text(
+            "Prosper",
+            style: TextStyle(
+              fontFamily: "MonarchDisplay",
+              color: Colors.black
+            )
           ),
-        )
+      ),
 
-//        child: Column(
-//          children: <Widget>[
-//            Row(
-//              children: <Widget>[
-//                getTitle(),
-//
-//
-//            ],
-//            )
-//          ],
-//        )
+      backgroundColor: getTheme(),
+      drawer: Drawer(),
+      body: Container(
+
+        child: ListView(
+          children: <Widget>[
+            Container(
+              padding:  const EdgeInsets.only(left:20.0, top: 40.0),
+
+            child: Text("Looks like you are interested in learning about Trading Stocks at a ${level} level.",
+            style: TextStyle(
+              fontFamily: "Medium",
+              fontSize: 26
+            ))),
+            Container(
+              padding: const EdgeInsets.only(left: 20, top:20),
+              child: Text("We have created a personalized guide to help you with that.",
+              style: TextStyle(
+                color: Colors.grey,
+                fontFamily: "Regular"
+                )
+              )
+            ),
+            Center(
+            child: Container(
+              width: size.width * 0.8,
+              child: OutlineButton(
+                onPressed: (){},
+                child: Text(
+                  "Start Now"
+                ),
+
+              )
+            )
+            )
+          ],
+      )
+
+
       )
 
     );
