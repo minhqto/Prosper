@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:simon_sene_carl/SecondScreen.dart';
 import 'themeColor.dart';
 
+
 class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -13,6 +14,7 @@ class FirstScreen extends StatelessWidget {
           //padding: EdgeInsets.all(20.0),
           child: Stack(children: <Widget>[
             getTitle(),
+
             Center(
                 child: Container(
               child: Padding(

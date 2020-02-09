@@ -15,6 +15,8 @@ class _ConceptState extends State<ChooseConcept> {
   List<String> easyConcepts = ["Buying Stocks", "Selling Stocks", "Dividends"];
   List<String> mediumConcepts = ["Limits", "Stops", "Stop Limits"];
   List<String> hardConcepts = ["Put Options", "Short Selling"];
+  List<String> selectedConcepts = [];
+  bool selected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -46,19 +48,45 @@ class _ConceptState extends State<ChooseConcept> {
                 padding: getHeaderPadding(),
                 child: Text("Choose a Concept",
                     style: TextStyle(fontFamily: "Medium", fontSize: 28))),
+            GestureDetector(
+              onTap: (){
+                  setState(() {
+                    selected = true;
+                  });
+                  },
+              onTapCancel: (){
+                setState(() {
+                  selected = false;
+                });
+              },
+                child: AnimatedContainer(
+                  padding: EdgeInsets.only(top: 400),
+                  duration: Duration(milliseconds: 500),
+                  width: size.width * 0.8,
+                  height: selected ? 400 : 200,
+                  color: selected ? Colors.pinkAccent : getTheme(),
+                  child: Text("tkjhhkhhjhest",
+                      style:
+                      TextStyle(fontFamily: "Regular", fontSize: 67, color: Colors.black))),
+            ),
             Column(
               children: <Widget>[
                 if (widget.choice.toString() == "Beginner")
-                for (var choice in easyConcepts)
+                for (String choice in easyConcepts)
                   Container(
                       padding: EdgeInsets.only(top: 40),
                       width: size.width * 0.8,
                       child: OutlineButton(
-                        onPressed: () {},
-                        child: Text(choice,
+                        onPressed: () {
+                          setState(() {
+                            selected != selected;
+                          });
+                        },
+                          child: Text(choice,
                             style:
-                                TextStyle(fontFamily: "Regular", fontSize: 22)),
-                      )),
+                        TextStyle(fontFamily: "Regular", fontSize: 22))),
+                      ),
+
                 if(widget.choice.toString() == "Intermediate")
                   for (var choice in mediumConcepts)
                     Container(
