@@ -28,7 +28,6 @@ class ThirdScreen extends StatelessWidget {
                 width: size.width,
                 height: size.height,
                 child: ListView(
-
                   children: <Widget>[
                     Container(
                       alignment: Alignment(-1, 0),
@@ -59,14 +58,14 @@ class ThirdScreen extends StatelessWidget {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) =>
-                                                LearnStocks(
-                                                    level: level.toString()))
-                                    );
+                                            builder: (context) => LearnStocks(
+                                                  level: level.toString(),
+                                                  topic: this.topic,
+                                                )));
                                   },
                                   child: Text(level.toString(),
                                       style: TextStyle(fontFamily: "Regular"))))
-                        ],
+                      ],
                     )
                   ],
                 ),
