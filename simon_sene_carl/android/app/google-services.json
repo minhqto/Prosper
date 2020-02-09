@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "370597565920",
+    "firebase_url": "https://prosper-8d2c2.firebaseio.com",
+    "project_id": "prosper-8d2c2",
+    "storage_bucket": "prosper-8d2c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370597565920:android:3bf105d9f459093f7cc785",
+        "android_client_info": {
+          "package_name": "minh.simon_sene_carl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370597565920-ggeu9mo8mb3uoemcqeo5pvpcd6rqissa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7M4JNDmPG-TA7Nbi0CBDhtVBRLT3b_qI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370597565920-ggeu9mo8mb3uoemcqeo5pvpcd6rqissa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
