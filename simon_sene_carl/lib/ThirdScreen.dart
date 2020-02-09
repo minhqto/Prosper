@@ -2,7 +2,7 @@ import 'package:flappy_search_bar/scaled_tile.dart';
 import 'package:flappy_search_bar/search_bar_style.dart';
 import 'package:flutter/material.dart';
 //import 'package:simon_sene_carl/learnStocks.dart';
-import "package:flappy_search_bar/flappy_search_bar.dart";
+//import "package:flappy_search_bar/flappy_search_bar.dart";
 import 'package:simon_sene_carl/learnStocks.dart';
 import 'themeColor.dart';
 
