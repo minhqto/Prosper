@@ -46,8 +46,15 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    child: MyCarousel(),
-                  )
+                      child: Column(
+                    children: <Widget>[
+                      Container(
+                          width: size.width,
+                          height: 30,
+                          child: Text("YOUR SUBCRIPTION")),
+                      MyCarousel()
+                    ],
+                  ))
                 ],
               ),
             )

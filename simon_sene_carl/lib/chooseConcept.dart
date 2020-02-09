@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:simon_sene_carl/widgets/drawer.dart';
 import 'themeColor.dart';
 import 'buyingStock.dart';
 
@@ -11,7 +12,6 @@ class ChooseConcept extends StatefulWidget {
 }
 
 class _ConceptState extends State<ChooseConcept> {
-
   List<String> easyConcepts = ["Buying Stocks", "Selling Stocks", "Dividends"];
   List<String> mediumConcepts = ["Limits", "Stops", "Stop Limits"];
   List<String> hardConcepts = ["Put Options", "Short Selling"];
@@ -31,7 +31,7 @@ class _ConceptState extends State<ChooseConcept> {
               style:
                   TextStyle(fontFamily: "MonarchDisplay", color: Colors.black)),
         ),
-        drawer: Drawer(),
+        drawer: MyDrawer(),
         body: ListView(
           children: <Widget>[
             Container(
@@ -49,17 +49,17 @@ class _ConceptState extends State<ChooseConcept> {
             Column(
               children: <Widget>[
                 if (widget.choice.toString() == "Beginner")
-                for (var choice in easyConcepts)
-                  Container(
-                      padding: EdgeInsets.only(top: 40),
-                      width: size.width * 0.8,
-                      child: OutlineButton(
-                        onPressed: () {},
-                        child: Text(choice,
-                            style:
-                                TextStyle(fontFamily: "Regular", fontSize: 22)),
-                      )),
-                if(widget.choice.toString() == "Intermediate")
+                  for (var choice in easyConcepts)
+                    Container(
+                        padding: EdgeInsets.only(top: 40),
+                        width: size.width * 0.8,
+                        child: OutlineButton(
+                          onPressed: () {},
+                          child: Text(choice,
+                              style: TextStyle(
+                                  fontFamily: "Regular", fontSize: 22)),
+                        )),
+                if (widget.choice.toString() == "Intermediate")
                   for (var choice in mediumConcepts)
                     Container(
                         padding: EdgeInsets.only(top: 40),
@@ -67,10 +67,10 @@ class _ConceptState extends State<ChooseConcept> {
                         child: OutlineButton(
                           onPressed: () {},
                           child: Text(choice,
-                              style:
-                              TextStyle(fontFamily: "Regular", fontSize: 22)),
+                              style: TextStyle(
+                                  fontFamily: "Regular", fontSize: 22)),
                         )),
-                if(widget.choice.toString() == "Advanced")
+                if (widget.choice.toString() == "Advanced")
                   for (var choice in hardConcepts)
                     Container(
                         padding: EdgeInsets.only(top: 40),
@@ -78,11 +78,10 @@ class _ConceptState extends State<ChooseConcept> {
                         child: OutlineButton(
                           onPressed: () {},
                           child: Text(choice,
-                              style:
-                              TextStyle(fontFamily: "Regular", fontSize: 22)),
+                              style: TextStyle(
+                                  fontFamily: "Regular", fontSize: 22)),
                         )),
               ],
-
             ),
             Container(
                 padding: EdgeInsets.only(top: 200),

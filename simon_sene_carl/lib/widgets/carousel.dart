@@ -10,64 +10,94 @@ class MyCarousel extends StatefulWidget {
 
 class _HomePageState extends State<MyCarousel> {
   var items = [
-    {"topic": "Topic 1", "progress": "6/10"},
-    {"topic": "Topic 2", "progress": "9/10"},
-    {"topic": "Topic 3", "progress": "7/10"},
-    {"topic": "Topic 4", "progress": "5/10"},
-    {"topic": "Topic 5", "progress": "3/10"},
-    {"topic": "Topic 6", "progress": "2/10"},
-    {"topic": "Topic 7", "progress": "10/10"},
-    {"topic": "Topic 8", "progress": "9/10"},
+    {"topic": "Trading Stocks", "progress": "6/10"},
+    {"topic": "TFSA", "progress": "9/10"},
+    {"topic": "Real Estate", "progress": "7/10"},
+    {"topic": "Mutual Funds", "progress": "5/10"},
+    {"topic": "RRSP", "progress": "3/10"},
+    {"topic": "Trading Stocks", "progress": "2/10"},
+    {"topic": "Bonds", "progress": "10/10"},
   ];
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size;
     return CarouselSlider(
-      height: 400.0,
+      height: 300.0,
       items: items.map((item) {
         return Builder(
           builder: (BuildContext context) {
+            var size = MediaQuery.of(context).size;
             return Container(
-                width: size.width * 0.7,
-                height: size.height * 0.5,
+                height: 300,
                 margin: EdgeInsets.symmetric(horizontal: 4.0),
-                decoration: BoxDecoration(color: Colors.amber),
+                decoration:
+                    BoxDecoration(border: Border.all(color: Colors.grey[50])),
                 child: ListView(
                   children: <Widget>[
                     Container(
-                      color: Colors.pink,
-                      height: size.height * 0.1,
+                      decoration:
+                          BoxDecoration(border: Border.all(color: Colors.grey)),
+                      padding: EdgeInsets.all(20),
+                      height: size.height * 0.13,
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Text("Title"),
-                          Text(item["topic"]),
+                          Text("TOPIC"),
+                          Text(
+                            item["topic"],
+                            style: TextStyle(fontSize: 23),
+                          ),
                         ],
                       ),
                     ),
                     Container(
-                      height: 100,
                       child: Column(
                         children: <Widget>[
                           Container(
-                            child: Row(children: <Widget>[
-                              Text("Progress"),
-                              Text(item["progress"])
-                            ]),
+                            decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey)),
+                            padding: EdgeInsets.all(20),
+                            height: size.height * 0.1,
+                            child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Text("Progress",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                  Text(item["progress"])
+                                ]),
                           ),
                           Container(
-                            child: Row(children: <Widget>[
-                              Text("Progress"),
-                              Text("6/10")
-                            ]),
+                            decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey)),
+                            padding: EdgeInsets.all(20),
+                            height: size.height * 0.1,
+                            child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Text("Upcoming",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                  Text("Choose Concept")
+                                ]),
                           ),
                           Container(
-                            child: Row(children: <Widget>[
-                              Text("Progress"),
-                              Text("6/10")
-                            ]),
+                            decoration: BoxDecoration(
+                                border: Border.all(color: Colors.grey)),
+                            padding: EdgeInsets.all(20),
+                            height: size.height * 0.1,
+                            child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  Text("Learn",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.bold)),
+                                  Text("Review all")
+                                ]),
                           ),
                         ],
                       ),
