@@ -5,12 +5,13 @@ import 'buyingStock.dart';
 
 class ChooseConcept extends StatefulWidget {
   final choice;
-  ChooseConcept({@required this.choice});
+  ChooseConcept({this.choice});
   @override
   _ConceptState createState() => new _ConceptState();
 }
 
 class _ConceptState extends State<ChooseConcept> {
+
   List<String> easyConcepts = ["Buying Stocks", "Selling Stocks", "Dividends"];
   List<String> mediumConcepts = ["Limits", "Stops", "Stop Limits"];
   List<String> hardConcepts = ["Put Options", "Short Selling"];
@@ -47,7 +48,7 @@ class _ConceptState extends State<ChooseConcept> {
                     style: TextStyle(fontFamily: "Medium", fontSize: 28))),
             Column(
               children: <Widget>[
-                // if (choice.toString() == "Beginner")
+                if (widget.choice.toString() == "Beginner")
                 for (var choice in easyConcepts)
                   Container(
                       padding: EdgeInsets.only(top: 40),
@@ -57,8 +58,31 @@ class _ConceptState extends State<ChooseConcept> {
                         child: Text(choice,
                             style:
                                 TextStyle(fontFamily: "Regular", fontSize: 22)),
-                      ))
+                      )),
+                if(widget.choice.toString() == "Intermediate")
+                  for (var choice in mediumConcepts)
+                    Container(
+                        padding: EdgeInsets.only(top: 40),
+                        width: size.width * 0.8,
+                        child: OutlineButton(
+                          onPressed: () {},
+                          child: Text(choice,
+                              style:
+                              TextStyle(fontFamily: "Regular", fontSize: 22)),
+                        )),
+                if(widget.choice.toString() == "Advanced")
+                  for (var choice in hardConcepts)
+                    Container(
+                        padding: EdgeInsets.only(top: 40),
+                        width: size.width * 0.8,
+                        child: OutlineButton(
+                          onPressed: () {},
+                          child: Text(choice,
+                              style:
+                              TextStyle(fontFamily: "Regular", fontSize: 22)),
+                        )),
               ],
+
             ),
             Container(
                 padding: EdgeInsets.only(top: 200),
