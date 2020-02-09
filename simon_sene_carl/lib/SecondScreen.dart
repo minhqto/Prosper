@@ -15,6 +15,7 @@ class SecondScreen extends StatelessWidget {
       "Real Estate",
       "Mutual Funds",
       "RRSP",
+      "Trading Stocks",
       "Bonds"
     ];
 

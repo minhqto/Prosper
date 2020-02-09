@@ -51,7 +51,7 @@ class ThirdScreen extends StatelessWidget {
                         for (var level in knowledgeBase)
                           Container(
                               width: size.width,
-                              height: size.height * 0.08,
+                              height: size.height * 0.12,
                               padding: const EdgeInsets.all(10),
                               child: OutlineButton(
                                   onPressed: () {
