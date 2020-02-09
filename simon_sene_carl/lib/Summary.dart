@@ -4,18 +4,18 @@
  import "themeColor.dart";
 
 
-class Summary extends StatefulWidget{
+class MySummary extends StatefulWidget{
   final ticker;
   final marketVal;
   final quantity;
 
-  Summary({this.ticker, this.marketVal, this.quantity});
+  MySummary({@required this.ticker,@required  this.marketVal,@required  this.quantity});
 
   @override
   _Summary createState() => new _Summary();
 }
 
-class _Summary extends State<Summary> {
+class _Summary extends State<MySummary> {
 
   @override
   Widget build(BuildContext context) {
@@ -246,4 +246,5 @@ class _Summary extends State<Summary> {
     );
   }
 }
+
 

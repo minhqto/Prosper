@@ -5,9 +5,10 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import "SearchStock.dart";
+
 import "FirstScreen.dart";
 import 'wall.dart';
-
+import 'SetQuantity.dart';
 void main() {
   runApp(MyApp());
 }
@@ -18,5 +19,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return new MaterialApp(home: FirstScreen());
+
   }
 }

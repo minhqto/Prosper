@@ -7,12 +7,12 @@ import 'package:simon_sene_carl/SearchStock.dart';
 import 'package:simon_sene_carl/ThirdScreen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import "../Post.dart";
-
+import '../SetQuantity.dart';
 class MySearchBar extends StatelessWidget {
   bool isSearchStock = true;
   String result;
 
-  MySearchBar({this.isSearchStock});
+  MySearchBar({this.isSearchStock, this.result});
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +41,8 @@ class MySearchBar extends StatelessWidget {
                     ? Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => HomePage()), //parse in result
-                      )
+                            builder: (context) => SetQuantity(stock_name: result), //parse in result
+                      ))
                     : Navigator.push(
                         context,
                         MaterialPageRoute(
