@@ -3,7 +3,7 @@ import 'selectTopic.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'dart:async';
-
+import "SearchStock.dart";
 import "FirstScreen.dart";
 import 'wall.dart';
 
@@ -16,6 +16,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return new MaterialApp(home: FirstScreen());
+    return new MaterialApp(home: SearchStock());
   }
 }
