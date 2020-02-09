@@ -8,13 +8,16 @@ class BuyingStocks extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+        extendBodyBehindAppBar: false,
+
         backgroundColor: getTheme(),
-        appBar: AppBar(
+        appBar: AppBar(elevation: 0,
         iconTheme: new IconThemeData(color: Colors.black),
+        backgroundColor: getTheme(),
         title: Text("Prosper",
             style:
             TextStyle(fontFamily: "MonarchDisplay", color: Colors.black))),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
 
       body: ListView(
         children: <Widget>[

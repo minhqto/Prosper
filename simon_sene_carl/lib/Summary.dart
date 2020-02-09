@@ -1,21 +1,23 @@
- import 'package:cloud_firestore/cloud_firestore.dart';
- import 'package:flutter/cupertino.dart';
- import 'package:flutter/material.dart';
- import "themeColor.dart";
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:simon_sene_carl/CongratulationScreen.dart';
+import 'package:simon_sene_carl/widgets/drawer.dart';
+import "themeColor.dart";
 
 
-class Summary extends StatefulWidget{
+class MySummary extends StatefulWidget{
   final ticker;
   final marketVal;
   final quantity;
 
-  Summary({this.ticker, this.marketVal, this.quantity});
+  MySummary({this.ticker, this.marketVal, this.quantity});
 
   @override
   _Summary createState() => new _Summary();
 }
 
-class _Summary extends State<Summary> {
+class _Summary extends State<MySummary> {
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class _Summary extends State<Summary> {
               style:
               TextStyle(fontFamily: "MonarchDisplay", color: Colors.black)),
         ),
-        drawer: Drawer(),
+        drawer: MyDrawer(),
         body: ListView(
           children: <Widget>[
             Container(
@@ -232,7 +234,7 @@ class _Summary extends State<Summary> {
                       child: Padding(
                           padding: EdgeInsets.only(top: 40, right: 20),
                           child: OutlineButton(
-                            onPressed: () {},
+                            onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>Congratulation()));},
 
                             child: Text(
                                 'Confirm Purchase', textAlign: TextAlign.right,

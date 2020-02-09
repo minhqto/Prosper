@@ -31,11 +31,11 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    "Hello Jessica",
+                    "Hello Jessica,",
                     style: TextStyle(fontSize: 17),
                   ),
                   Text(
-                    "Continue your learning today with a new finanacial concept",
+                    "Continue your learning today with a new financial concept",
                     style: TextStyle(fontSize: 24),
                   ),
                   Center(
@@ -51,7 +51,7 @@ class HomePage extends StatelessWidget {
                       Container(
                           width: size.width,
                           height: 30,
-                          child: Text("YOUR SUBCRIPTION")),
+                          child: Text("Topics")),
                       MyCarousel()
                     ],
                   ))

@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-
+import 'package:simon_sene_carl/SearchStock.dart';
 
 
 const String testDevice = '';
@@ -104,7 +104,7 @@ class _WallScreenState extends State<WallScreen> {
 
             padding: EdgeInsets.only(top: 15),
             child: OutlineButton(
-              onPressed: (){},
+              onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchStock()));},
               child: Text("Practice Buying a Stock",
                   style: TextStyle(
                       fontFamily: "Regular",

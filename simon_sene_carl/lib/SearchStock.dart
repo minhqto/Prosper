@@ -31,7 +31,7 @@ class SearchStock extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                         )),
                     Text(
-                        "Statrted by searching for a company that you are interested in",
+                        "Start by searching for the name of acompany that you want to buy shares of",
                         style: TextStyle(
                           fontFamily: "Regular",
                           fontSize: 19,
