@@ -59,8 +59,8 @@ class _WallScreenState extends State<WallScreen> {
                           padding: const EdgeInsets.all(8.0),
                           child: new Text(snapshot[i].data['title'],
                               style: new TextStyle(
-                                fontFamily: 'Regular',
-                                fontSize: 18.0,
+                                fontFamily: 'Medium',
+                                fontSize: 16.0,
                               )
                           ),
                         ),
@@ -100,7 +100,7 @@ class _WallScreenState extends State<WallScreen> {
             fontSize: 20
           )),
           Container(
-              padding: EdgeInsets.only(bottom: 15),
+              padding: EdgeInsets.only(top: 5, bottom: 10),
               child: Text("We have selected several articles for you if you are interested in exploring more about Trading Stocks",
               style: TextStyle(
                   fontFamily: "Regular",
@@ -111,8 +111,9 @@ class _WallScreenState extends State<WallScreen> {
             child: _buildBody(context)
           ),
           Container(
+            padding: EdgeInsets.only(top: 15),
             child: OutlineButton(
-              onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => SearchStock()))},
+              //onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => SearchStock()))},
               child: Text("Practice Buying a Stock",
                   style: TextStyle(
                       fontFamily: "Regular",
@@ -182,7 +183,7 @@ class SingleArticle extends StatelessWidget {
                       ),
                       child: Text(
                         title,
-                        style: TextStyle(fontSize: 20.0, fontFamily: "Regular"),
+                        style: TextStyle(fontSize: 18.0, fontFamily: "BoldBold",),
                       ),
                     ),
                   ),
@@ -234,7 +235,7 @@ class SingleArticle extends StatelessWidget {
                       child: Text(this.content[index],
                           style: TextStyle(
                               fontFamily: "Regular",
-                              fontSize: 20
+                              fontSize: 14
                           )),
                     );
                   },
