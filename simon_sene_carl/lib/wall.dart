@@ -49,27 +49,33 @@ class _WallScreenState extends State<WallScreen> {
                       builder: (context) =>
                       new SingleArticle(imgPath, snapshot[i].data['title'],snapshot[i].data['content'] )));
             },
-            child: Column(
-                children: [
-                  new Align(
-                    alignment: Alignment.bottomCenter,
-                    child: new Padding(
-                        padding: EdgeInsets.all(10),
-                        child: Text(snapshot[i].data['title'])
-                    ),
-                  ),new FadeInImage(
-                    image: new NetworkImage(imgPath),
-                    fit: BoxFit.fitHeight ,
-                    placeholder: new AssetImage("assets/m.jpeg"),
-                  ),]
+            child: Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(width: 2.0, color: const Color(0xFFFFFFFF))),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Image.network(imgPath, fit: BoxFit.cover),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: new Text(snapshot[i].data['title'],
+                              style: new TextStyle(
+                                fontFamily: 'Regular',
+                                fontSize: 18.0,
+                              )
+                          ),
+                        ),
+                      ]
+                  ),
+                )
             )
-          ),
+
         );
       },
       staggeredTileBuilder: (i) =>
-      new StaggeredTile.count(2, i.isEven ? 2 : 3),
-      mainAxisSpacing: 8.0,
-      crossAxisSpacing: 8.0,
+      new StaggeredTile.fit(2),
+      mainAxisSpacing: 6.0,
+      crossAxisSpacing: 6.0,
     );
   }
 
@@ -77,11 +83,16 @@ class _WallScreenState extends State<WallScreen> {
   Widget build(BuildContext context) {
     return new Scaffold(
         backgroundColor: getTheme(),
+        extendBodyBehindAppBar: false,
         appBar: new AppBar(
-          title: Center(
-            child:new Text("Topic"),
-          )
+          elevation: 0,
+          backgroundColor: getTheme(),
+          iconTheme: new IconThemeData(color: Colors.black),
+          title: Text("Prosper",
+              style:
+              TextStyle(fontFamily: "MonarchDisplay", color: Colors.black)),
         ),
+        drawer: Drawer(),
       body: _buildBody(context)
     );
   }
@@ -121,10 +132,28 @@ class SingleArticle extends StatelessWidget {
                     StretchMode.fadeTitle,
                   ],
                   centerTitle: false,
-                  title: const Text('Title', style: TextStyle(
-                      fontFamily: "Regular",
-                      fontSize: 25
-                  )),
+                  title:Container(
+                    child: ConstrainedBox(
+                      constraints: BoxConstraints(
+                        minWidth: 240.0,
+                        maxWidth: 240.0,
+                        minHeight: 30.0,
+                        maxHeight: 100.0,
+                      ),
+                      child: Text(
+                        title,
+                        style: TextStyle(fontSize: 20.0, fontFamily: "Regular"),
+                      ),
+                    ),
+                  ),
+
+
+
+//                  FittedBox(fit:BoxFit.fitWidth,
+//                      child: Text(title, style: TextStyle(
+//                          fontFamily: "Regular",
+//                          fontSize: 15))
+//                  ),
                   background: Stack(
                     fit: StackFit.expand,
                     children: [
@@ -135,8 +164,8 @@ class SingleArticle extends StatelessWidget {
                       const DecoratedBox(
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
-                            begin: Alignment(0.0, 0.5),
-                            end: Alignment(0.0, 0.0),
+                            begin: Alignment(0.9,0.9),
+                            end: Alignment(0.9, 0.0),
                             colors: <Color>[
                               Color.fromRGBO(61, 61, 61, 0.4),
                               Color.fromRGBO(61, 61, 61, 0.1)
@@ -159,6 +188,7 @@ class SingleArticle extends StatelessWidget {
                     /// uncomment the following line:
                     /// if (index > n) return null;
                     return Container(
+                      color: getTheme(),
                       padding: const EdgeInsets.all(20.0),
                       alignment: Alignment.center,
                       child: Text(this.content[index],
