@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/rendering.dart';
 import 'themeColor.dart';
 import 'package:flutter/material.dart';
+import 'chooseConcept.dart';
 
 class LearnStocks extends StatelessWidget{
 
@@ -10,6 +11,7 @@ LearnStocks({@required this.level});
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     // TODO: implement build
     return Scaffold(
         extendBodyBehindAppBar: true,
@@ -29,22 +31,37 @@ LearnStocks({@required this.level});
       backgroundColor: getTheme(),
       drawer: Drawer(),
       body: Container(
-        padding:  const EdgeInsets.only(left:50.0, top: 40.0),
+
         child: ListView(
           children: <Widget>[
-            Text("Looks like you are interested in learning about Trading Stocks at a ${level} level.",
+            Container(
+              padding:  const EdgeInsets.only(left:20.0, top: 40.0),
+
+            child: Text("Looks like you are interested in learning about Trading Stocks at a ${level} level.",
             style: TextStyle(
               fontFamily: "Medium",
               fontSize: 26
-            )),
+            ))),
             Container(
-              padding: const EdgeInsets.only(top:20),
+              padding: const EdgeInsets.only(left: 20, top:20),
               child: Text("We have created a personalized guide to help you with that.",
               style: TextStyle(
                 color: Colors.grey,
                 fontFamily: "Regular"
                 )
               )
+            ),
+            Center(
+            child: Container(
+              width: size.width * 0.8,
+              child: OutlineButton(
+                onPressed: (){},
+                child: Text(
+                  "Start Now"
+                ),
+
+              )
+            )
             )
           ],
       )

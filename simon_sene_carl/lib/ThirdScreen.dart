@@ -11,7 +11,7 @@ class ThirdScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     List<String> knowledgeBase = ["Beginner", "Intermediate", "Advanced"];
-    
+
     return Scaffold(
       backgroundColor: getTheme(),
       body: Container(
@@ -53,14 +53,16 @@ class ThirdScreen extends StatelessWidget {
                               child: OutlineButton(
                                   onPressed: () {
                                     Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) => LearnStocks(level: level.toString()))
-                                          );
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                LearnStocks(
+                                                    level: level.toString()))
+                                    );
                                   },
                                   child: Text(level.toString(),
                                       style: TextStyle(fontFamily: "Regular"))))
-                      ],
+                        ],
                     )
                   ],
                 ),
