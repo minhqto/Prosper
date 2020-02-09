@@ -47,7 +47,7 @@ class MySearchBar extends StatelessWidget {
   }
 
   Future<List<Post>> search(String search) async {
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(Duration(seconds: 1));
     return List.generate(1, (int index) {
       return Post(
         "$search",

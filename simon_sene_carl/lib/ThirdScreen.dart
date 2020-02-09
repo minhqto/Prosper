@@ -11,11 +11,7 @@ class ThirdScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     List<String> knowledgeBase = ["Beginner", "Intermediate", "Advanced"];
-
-    bool ifBeginner(String level) {
-      return level == "Beginner" ? true : false;
-    }
-
+    
     return Scaffold(
       backgroundColor: getTheme(),
       body: Container(
@@ -56,17 +52,10 @@ class ThirdScreen extends StatelessWidget {
                               padding: const EdgeInsets.all(10),
                               child: OutlineButton(
                                   onPressed: () {
-                                    ifBeginner(level.toString())
-                                        ? Navigator.push(
+                                    Navigator.push(
                                             context,
                                             MaterialPageRoute(
-                                                builder: (context) =>
-                                                    LearnStocks()))
-                                        : AlertDialog(
-                                            title: Text("Hey there!"),
-                                            content: Text(
-                                                "Not so fast! Let's start with beginner."),
-                                            actions: <Widget>[],
+                                                builder: (context) => LearnStocks(level: level.toString()))
                                           );
                                   },
                                   child: Text(level.toString(),
