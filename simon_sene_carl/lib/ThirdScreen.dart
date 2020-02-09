@@ -46,7 +46,7 @@ class ThirdScreen extends StatelessWidget {
               Container(
                 width: size.width,
                 height: size.height,
-                child: Column(
+                child: ListView(
 
                   children: <Widget>[
                     Container(
