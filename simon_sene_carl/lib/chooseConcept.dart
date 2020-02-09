@@ -15,6 +15,8 @@ class _ConceptState extends State<ChooseConcept> {
   List<String> easyConcepts = ["Buying Stocks", "Selling Stocks", "Dividends"];
   List<String> mediumConcepts = ["Limits", "Stops", "Stop Limits"];
   List<String> hardConcepts = ["Put Options", "Short Selling"];
+  List<String> selectedConcepts = [];
+  bool selected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -49,16 +51,21 @@ class _ConceptState extends State<ChooseConcept> {
             Column(
               children: <Widget>[
                 if (widget.choice.toString() == "Beginner")
-                  for (var choice in easyConcepts)
+                  for (String choice in easyConcepts)
                     Container(
-                        padding: EdgeInsets.only(top: 40),
-                        width: size.width * 0.8,
-                        child: OutlineButton(
-                          onPressed: () {},
+                      padding: EdgeInsets.only(top: 40),
+                      width: size.width * 0.8,
+                      child: OutlineButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => BuyingStocks()));
+                          },
                           child: Text(choice,
                               style: TextStyle(
-                                  fontFamily: "Regular", fontSize: 22)),
-                        )),
+                                  fontFamily: "Regular", fontSize: 22))),
+                    ),
                 if (widget.choice.toString() == "Intermediate")
                   for (var choice in mediumConcepts)
                     Container(
@@ -82,19 +89,7 @@ class _ConceptState extends State<ChooseConcept> {
                                   fontFamily: "Regular", fontSize: 22)),
                         )),
               ],
-            ),
-            Container(
-                padding: EdgeInsets.only(top: 200),
-                alignment: Alignment(0.9, 0),
-                child: FlatButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => BuyingStock()),
-                      );
-                    },
-                    child: Text("Next",
-                        style: TextStyle(fontSize: 22, fontFamily: "Medium"))))
+            )
           ],
         ));
   }
