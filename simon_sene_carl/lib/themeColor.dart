@@ -34,3 +34,13 @@ Center getTitle()
         alignment: Alignment(-1.0, -0.7),
       ));
 }
+
+EdgeInsets getSubHeaderPadding()
+{
+  return const EdgeInsets.only(left: 20, top: 30, bottom: 10);
+}
+
+EdgeInsets getHeaderPadding()
+{
+  return const EdgeInsets.only(left: 20, top: 10, bottom: 10);
+}

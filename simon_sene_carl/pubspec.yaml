@@ -53,6 +53,7 @@ flutter:
   assets:
     - img/landing-vector.png
     - img/nav-arrow.png
+    - img/selection-vector_Artboard_6.png
     - assets/m.jpeg
   #  - images/a_dot_ham.jpeg
 

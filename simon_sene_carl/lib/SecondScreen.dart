@@ -10,11 +10,11 @@ class SecondScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     List<String> topics = [
+      "Trading Stocks",
       "TFSA",
       "Real Estate",
       "Mutual Funds",
       "RRSP",
-      "Trading Stock",
       "Bonds"
     ];
 

@@ -10,7 +10,7 @@ final level;
 LearnStocks({@required this.level});
 
   @override
-  Widget build(BuildContext context) {
+   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     // TODO: implement build
     return Scaffold(
@@ -37,13 +37,19 @@ LearnStocks({@required this.level});
             Container(
               padding:  const EdgeInsets.only(left:20.0, top: 40.0),
 
-            child: Text("Looks like you are interested in learning about Trading Stocks at a ${level} level.",
+            child: Text("Looks like you are interested in learning about Trading Stocks at the ${level} level.",
             style: TextStyle(
               fontFamily: "Medium",
               fontSize: 26
             ))),
+            Center(
+                child: Container(
+                    padding: const EdgeInsets.only(top: 20.0),
+                    child: Image(image: AssetImage('img/selection-vector_Artboard_6.png'))
+                )
+            ),
             Container(
-              padding: const EdgeInsets.only(left: 20, top:20),
+              padding: const EdgeInsets.only(left: 20, top:20, bottom: 20),
               child: Text("We have created a personalized guide to help you with that.",
               style: TextStyle(
                 color: Colors.grey,
@@ -51,17 +57,41 @@ LearnStocks({@required this.level});
                 )
               )
             ),
+
             Center(
             child: Container(
               width: size.width * 0.8,
               child: OutlineButton(
-                onPressed: (){},
+                onPressed: (){
+                  Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ChooseConcept(choice: level)));
+                },
                 child: Text(
-                  "Start Now"
+                  "Start Now",
+                  style: TextStyle(
+                    fontFamily: "Regular"
+                  )
                 ),
 
               )
             )
+            ),
+            Center(
+              child: Container(
+                  width: size.width * 0.8,
+                  child: FlatButton(
+                    onPressed: (){
+                      Navigator.pop(context);
+                    },
+                    child: Text(
+                        "Go Back",
+                      style: TextStyle(
+                        fontFamily: "Regular"
+                      )
+                    ),
+
+                  )
+              )
             )
           ],
       )
