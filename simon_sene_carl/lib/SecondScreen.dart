@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:simon_sene_carl/ThirdScreen.dart';
 import 'package:simon_sene_carl/widgets/searchBar.dart';
+import 'package:simon_sene_carl/ThirdScreen.dart';
+//import "package:flappy_search_bar/flappy_search_bar.dart";
+import 'themeColor.dart';
 
 class SecondScreen extends StatelessWidget {
   @override
