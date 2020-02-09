@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:simon_sene_carl/themeColor.dart';
 import 'package:simon_sene_carl/widgets/drawer.dart';
+import "./widgets/carousel.dart";
 
 class HomePage extends StatelessWidget {
   @override
@@ -39,11 +40,14 @@ class HomePage extends StatelessWidget {
                   ),
                   Center(
                     child: Container(
-                      child: Image(image: AssetImage('img/landing-vector.png')),
-                      width: MediaQuery.of(context).size.width,
+                      child: Image(image: AssetImage('img/pig.png')),
+                      width: MediaQuery.of(context).size.width * 0.7,
                       alignment: Alignment(0.5, 0.3),
                     ),
                   ),
+                  Container(
+                    child: MyCarousel(),
+                  )
                 ],
               ),
             )
