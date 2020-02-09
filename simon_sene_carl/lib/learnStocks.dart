@@ -70,23 +70,6 @@ class LearnStocks extends StatelessWidget {
                     child: Text("Go Back",
                         style: TextStyle(fontFamily: "Regular")),
                   ))),
-          Container(
-              padding: const EdgeInsets.only(left: 20.0, top: 40.0),
-              child: Text(
-                  "Looks like you are interested in learning about ${topic} at a ${level} level.",
-                  style: TextStyle(fontFamily: "Medium", fontSize: 26))),
-          Container(
-              padding: const EdgeInsets.only(left: 20, top: 20),
-              child: Text(
-                  "We have created a personalized guide to help you with that.",
-                  style: TextStyle(color: Colors.grey, fontFamily: "Regular"))),
-          Center(
-              child: Container(
-                  width: size.width * 0.8,
-                  child: OutlineButton(
-                    onPressed: () {},
-                    child: Text("Start Now"),
-                  )))
         ])));
   }
 }
