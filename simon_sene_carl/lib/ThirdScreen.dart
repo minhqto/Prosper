@@ -7,6 +7,10 @@ import 'package:simon_sene_carl/learnStocks.dart';
 import 'themeColor.dart';
 
 class ThirdScreen extends StatelessWidget {
+  final topic;
+
+  ThirdScreen({@required this.topic});
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -42,7 +46,7 @@ class ThirdScreen extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.fromLTRB(0, 0, 0, 100),
                       child: Text(
-                          "How would you rate your knowledge on this topic?",
+                          "How would you rate your knowledge on $topic?",
                           style: TextStyle(fontFamily: "Medium", fontSize: 30)),
                     ),
                     Column(

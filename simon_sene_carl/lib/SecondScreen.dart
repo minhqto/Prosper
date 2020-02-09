@@ -1,10 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:simon_sene_carl/ThirdScreen.dart';
 import 'package:simon_sene_carl/widgets/searchBar.dart';
 
 class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+    List<String> topics = [
+      "TFSA",
+      "Real Estate",
+      "Mutual Funds",
+      "RRSP",
+      "Trading Stock",
+      "Bonds"
+    ];
 
     return Scaffold(
       backgroundColor: const Color.fromRGBO(245, 246, 240, 1.0),
@@ -38,6 +47,27 @@ class SecondScreen extends StatelessWidget {
               Container(
                 child: MySearchBar(),
               ),
+              Column(
+                //stack of containers
+                children: <Widget>[
+                  for (var topic in topics)
+                    Container(
+                        width: size.width,
+                        height: size.height * 0.1,
+                        padding: const EdgeInsets.all(10),
+                        child: OutlineButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        ThirdScreen(topic: topic)),
+                              );
+                            },
+                            child: Text(topic,
+                                style: TextStyle(fontFamily: "Regular"))))
+                ],
+              )
             ],
           )),
     );
