@@ -7,11 +7,13 @@ import "themeColor.dart";
 
 
 class MySummary extends StatefulWidget{
-  final ticker;
-  final marketVal;
-  final quantity;
+  final String ticker;
+  final double marketVal;
+  final int quantity;
 
-  MySummary({this.ticker, this.marketVal, this.quantity});
+
+  MySummary({@required this.ticker,@required  this.marketVal,@required  this.quantity});
+
 
   @override
   _Summary createState() => new _Summary();
@@ -90,7 +92,7 @@ class _Summary extends State<MySummary> {
                   Expanded(
                       child: Padding(
                         padding: EdgeInsets.only(top: 10, right: 20),
-                        child: Text('Ticket PH', textAlign: TextAlign.right,
+                        child: Text(widget.ticker, textAlign: TextAlign.right,
                             style: TextStyle(
                                 fontSize: 20, fontFamily: "Regular")),
                       )),
@@ -113,7 +115,7 @@ class _Summary extends State<MySummary> {
                   Expanded(
                       child: Padding(
                         padding: EdgeInsets.only(top: 10, right: 20),
-                        child: Text('MV PH', textAlign: TextAlign.right,
+                        child: Text(widget.marketVal.toString(), textAlign: TextAlign.right,
                             style: TextStyle(
                                 fontSize: 20, fontFamily: "Regular")),
                       )),
@@ -136,7 +138,7 @@ class _Summary extends State<MySummary> {
                   Expanded(
                       child: Padding(
                         padding: EdgeInsets.only(top: 10, right: 20),
-                        child: Text('Quality PH', textAlign: TextAlign.right,
+                        child: Text(widget.quantity.toString(), textAlign: TextAlign.right,
                             style: TextStyle(
                                 fontSize: 20, fontFamily: "Regular")),
                       )),
@@ -159,7 +161,7 @@ class _Summary extends State<MySummary> {
                   Expanded(
                       child: Padding(
                         padding: EdgeInsets.only(top: 10, right: 20),
-                        child: Text('MV PH', textAlign: TextAlign.right,
+                        child: Text((widget.quantity * widget.marketVal).toString(), textAlign: TextAlign.right,
                             style: TextStyle(
                                 fontSize: 20, fontFamily: "Regular")),
                       )),
@@ -209,7 +211,7 @@ class _Summary extends State<MySummary> {
                   Expanded(
                       child: Padding(
                         padding: EdgeInsets.only(top: 10, right: 20),
-                        child: Text('TC PH', textAlign: TextAlign.right,
+                        child: Text("\$"+(widget.quantity * widget.marketVal + 9.95).toString() + " CAD", textAlign: TextAlign.right,
                             style: TextStyle(
                                 fontSize: 20, fontFamily: "Regular")),
                       )),
@@ -248,4 +250,5 @@ class _Summary extends State<MySummary> {
     );
   }
 }
+
 

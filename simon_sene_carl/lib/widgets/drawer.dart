@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:simon_sene_carl/FirstScreen.dart';
 import 'package:simon_sene_carl/wall.dart';
 import '../ThirdScreen.dart';
 import "../themeColor.dart";
@@ -82,13 +83,18 @@ class MyDrawer extends StatelessWidget {
                     },
                   ),
                   ListTile(
-                    title: Text('Settings',
+                    title: Text('Get Started',
                         style: TextStyle(color: Colors.white, fontSize: 20)),
                     onTap: () {
                       // Update the state of the app
                       // ...
                       // Then close the drawer
                       Navigator.pop(context);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => FirstScreen(),
+                          ));
                     },
                   ),
                 ],

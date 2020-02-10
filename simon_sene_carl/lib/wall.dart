@@ -98,17 +98,17 @@ class _WallScreenState extends State<WallScreen> {
                   "We have selected several articles for you if you are interested in exploring more about Trading Stocks",
                   style: TextStyle(fontFamily: "Regular", fontSize: 12))),
 
-          SizedBox(height: 570, child: _buildBody(context)),
+          SizedBox(height: 520, child: _buildBody(context)),
 
           Container(
 
-            padding: EdgeInsets.only(top: 15),
+            padding: EdgeInsets.only(top: 5),
             child: OutlineButton(
               onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>SearchStock()));},
               child: Text("Practice Buying a Stock",
                   style: TextStyle(
                       fontFamily: "Regular",
-                      fontSize: 16
+                      fontSize: 12
                   )
               )
             )
@@ -119,7 +119,7 @@ class _WallScreenState extends State<WallScreen> {
               child: Text("Go to Dashboard",
                   style: TextStyle(
                   fontFamily: "Regular",
-                  fontSize: 14
+                  fontSize: 12
               ))
             )),
 

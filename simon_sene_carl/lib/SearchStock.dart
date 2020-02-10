@@ -24,14 +24,14 @@ class SearchStock extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    Text("Search for a stock?",
+                    Text("Search for a stock",
                         style: TextStyle(
                           fontFamily: "Regular",
                           fontSize: 30,
                           fontWeight: FontWeight.w500,
                         )),
                     Text(
-                        "Start by searching for the name of acompany that you want to buy shares of",
+                        "Start by searching for the name of a company that you want to buy shares of",
                         style: TextStyle(
                           fontFamily: "Regular",
                           fontSize: 19,
